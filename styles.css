@@ -1,0 +1,182 @@
+/*COLORS*/
+:root{
+	--primary-color: #0f1d2f;
+}
+/*STYLES*/
+*{
+	box-sizing: border-box;
+}
+html, body{
+	color: var(--primary-color);
+	display: flex;
+	font-family: sans-serif;
+	flex: 1;
+	min-height: 100%;
+}
+body{
+	margin: 0;
+	padding: 30px;
+	width: 100%;
+}
+input, button{
+	font-family: inherit;
+}
+.m-todolist{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+.m-todolist h1{
+	text-align: center;
+}
+.m-todolist form{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto 20px;
+}
+.m-todolist form > button{
+	border: solid 1px var(--primary-color);
+	border-radius: 6px;
+	background: white;
+	cursor: pointer;
+	transition: .3s;
+	width: 80px;
+	padding: 6px 10px;
+}
+.m-todolist form > button:hover{
+	background: var(--primary-color);
+	color: white;
+}
+.c-todoinfo{
+	margin-right: 30px;
+}
+.c-todoinfo > input{
+	border: solid 1px var(--primary-color);
+	border-radius: 6px;
+	display: block;
+	padding: 6px 15px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.c-options{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: space-between;
+}
+.color-buttons{
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: space-between;
+	margin-right: 30px;
+	min-width: 160px;
+}
+.color-buttons .input-content{
+	position: relative;
+}
+.color-buttons .input-content input{
+	background: var(--radiocolor);
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	opacity: 0;
+}
+.color-buttons .input-content input + label, .color-buttons .input-content input + label::before{
+	border-radius: 50%;
+	position: absolute;
+}
+.color-buttons .input-content input + label{
+	background: var(--radiocolor);
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	left: 0;
+	top: 0;
+}
+.color-buttons .input-content input + label::before{
+	background: white;
+	border-radius: 50%;
+	content: '';
+	width: 20px;
+	height: 20px;
+	left: 5px;
+	top: 5px;
+}
+.color-buttons .input-content input:checked + label::before{
+	background: var(--radiocolor);
+}
+.m-todolist .c-options > input{
+	border: solid 1px var(--primary-color);
+	border-radius: 6px;
+	padding: 0 6px;
+}
+@media (max-width: 460px) {
+	.c-options{
+		margin-bottom: 10px;
+	}
+	.color-buttons{
+		margin-bottom: 10px;
+	}
+}
+.c-todolist ul{
+	list-style: none;
+	padding: 0;
+	margin: 0 0 20px;
+}
+.c-todolist ul li{
+	background: var(--todocolor);
+	border-radius: 6px;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	text-shadow: 0px 0px 3px black;
+}
+.c-todolist ul li p{
+	align-self: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.c-todolist ul li p:first-child{
+	flex-grow: 1;
+	max-width: 290px;
+}
+.c-todolist ul li p:last-of-type{
+	display: flex;
+	margin: auto 15px auto auto;
+	min-width: 180px;
+}
+.c-todolist ul li p:last-of-type span{
+	display: block;
+	margin: auto;
+}
+.c-todolist ul li button{
+	background: transparent;
+	border: solid 1px white;
+	border-radius: 6px;
+	color: white;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	height: 30px;
+	margin: auto 0 auto auto;
+	padding: 6px 10px;
+}
+@media (max-width: 600px) {
+	.c-todolist ul li p:first-child{
+		margin-bottom: 5px;
+		max-width: none;
+		width: 100%;
+	}
+	.c-todolist ul li p:last-of-type{
+		font-size: 12px;
+		margin: 0 10px 0 0;
+		min-width: 140px;
+	}
+	.c-todolist ul li p:last-of-type span{
+		margin: 0 10px 0 0;
+	}
+}

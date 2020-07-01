@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="m-todolist">
+		<h1>Práctica 1 - Todo List</h1>
+		<form id="formTodo">
+			<div class="c-todoinfo">
+				<input type="text" required id="todoname">
+				<div class="c-options">
+					<div class="color-buttons" id="colors"></div>
+					<input type="datetime-local" id="tododate" required>
+				</div>
+			</div>
+			<button type="submit">Guardar</button>
+		</form>
+		<div class="c-todolist">
+			<ul id="todolist"></ul>
+		</div>
+	</div>
+	<script src="scripts.js"></script>
+</body>
+</html>
