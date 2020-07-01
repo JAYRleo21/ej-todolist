@@ -92,7 +92,6 @@ loadTodoList();
 
 //Eliminar tarea
 function removeTodo(id){
-	console.log(event, id)
 	event.target.parentElement.remove();
 	localStorage.removeItem(id);
 }
